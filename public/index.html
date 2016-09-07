@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <title>天师的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="天师的博客">
+<meta property="og:url" content="http://0871087123.github.io/index.html">
+<meta property="og:site_name" content="天师的博客">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="天师的博客">
+<meta name="twitter:description">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="天师的博客" rel="home">天师的博客</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://blog.skylab.top/">天师的博客</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main">
+  
+    <article id="post-创业这点事" class="post-创业这点事 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/09/06/创业这点事/">创业这点事</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://0871087123.github.io/2016/09/06/创业这点事/" data-id="cisrmsmj900004ef7om86848i" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>创业第二年年底了，有了对自己“事业”告一段落的想法。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/09/06/创业这点事/">
+    <time datetime="2016-09-06T15:24:22.000Z" class="entry-date">
+        2016-09-06
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/创业/">创业</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-如何使用GLM完成魔方旋转的编号重排" class="post-如何使用GLM完成魔方旋转的编号重排 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/06/03/如何使用GLM完成魔方旋转的编号重排/">如何使用GLM完成魔方旋转的编号重排</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://0871087123.github.io/2016/06/03/如何使用GLM完成魔方旋转的编号重排/" data-id="cisrmpltb00012kf7vpy5m0t3" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>本文相当干货，包含数学应用技巧。</p>
+<p>前些日子，老大让各种小弟学习OpenGL渲染等等，一个主要的大作业就是用OpenGL绘制会旋转的魔方。</p>
+<p>大体的思路就是画三角形面=》两个三角形面形成一个正方形面=》6个正方形面旋转位移形成小立方体=》多个小立方体位移得到魔方</p>
+<p>静态的魔方绘制起来没啥难度，但是要做随机方向和层的魔方旋转，问题就出来了。</p>
+<p>假设只是2x2x2的2阶魔方，设上层左上角的方块编号为1，上层顺时针旋转之后，编号1的方块就到了编号为2的位置。每次旋转都需要重新设置方块的编号，以便下次旋转修改其模型矩阵。</p>
+<p>只是2阶或者3阶魔方的时候，这种编号的重设可以穷举解决。但是多阶魔方的时候，这种编号重设就难以找到规律进行简化。</p>
+<p>由此，我找了一种技巧，无论几阶魔方，都可以简单轻松的重设编号，每次旋转操作都可以找到对应的魔方方块。</p>
+<p>招数就是方块编号使用3维向量。以下使用glm与C++代码做为示例。并且用左手坐标系（z轴向上）。</p>
+<p>例如2阶魔方中，如果一个小方块位于上层的右下角，那么给予其一个向量编号pos（1，1，1），即（x轴正向为右，y轴正向朝外，z轴正向朝上）。那么以z轴为轴旋转90度，可以理解为对pos做旋转操作，以数学进行表达就是用旋转矩阵叉乘pos向量。glm+C++代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">glm::vec3 pos(1,1,1);</span><br><span class="line">glm::mat4 rotate_mat = glm::rotate(glm::mat4(1.0), glm::radians(90.0),  glm::vec3(0,0,1));</span><br><span class="line">pos = glm::vec3(rotate_mat * glm::vec4(pos, 1.0));</span><br></pre></td></tr></table></figure>
+<p>代码运行之后，得到pos为(1,-1,1)之类的旋转后的方块编号。不过由于有计算误差的情况，有时候会得到(0.99999, -0.999999, 1)之类的，此时对每个xyz值做一个浮点值近似判断就可以了。</p>
+<p>每一个方块存储一个pos向量作为位置编号，每次对方块完成旋转要重设编号的时候对pos做上述向量旋转操作，这样再次旋转的时候就可以轻松的找到需要旋转的对应方块了。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/06/03/如何使用GLM完成魔方旋转的编号重排/">
+    <time datetime="2016-06-03T07:53:25.000Z" class="entry-date">
+        2016-06-03
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/Learn-Think/">Learn&Think</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenGL/">OpenGL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术宅/">技术宅</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学/">数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机图形/">计算机图形</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/魔方/">魔方</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="post-hello-world post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/06/03/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://0871087123.github.io/2016/06/03/hello-world/" data-id="cisrmplt400002kf7m7e359jc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>第一次尝试用Hexo写点博客什么的，先看看再说了。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/06/03/hello-world/">
+    <time datetime="2016-06-03T06:58:24.000Z" class="entry-date">
+        2016-06-03
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+  
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-content">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Learn-Think/">Learn&Think</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2016/09/06/创业这点事/">创业这点事</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/03/如何使用GLM完成魔方旋转的编号重排/">如何使用GLM完成魔方旋转的编号重排</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/03/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenGL/">OpenGL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/创业/">创业</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术宅/">技术宅</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机图形/">计算机图形</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/魔方/">魔方</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/OpenGL/" style="font-size: 10px;">OpenGL</a> <a href="/tags/创业/" style="font-size: 10px;">创业</a> <a href="/tags/技术宅/" style="font-size: 10px;">技术宅</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/计算机图形/" style="font-size: 10px;">计算机图形</a> <a href="/tags/魔方/" style="font-size: 10px;">魔方</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2016 Kent Zhang
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
